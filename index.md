@@ -149,6 +149,7 @@ the pitch.
 {% include swc/intro.html %}
 {% elsif info.carpentry == "dc" %}
 {% include dc/intro.html %}
+{% remote_include {{lesson_meta}}/description.md %}
 {% elsif info.carpentry == "lc" %}
 {% include lc/intro.html %}
 {% elsif info.carpentry == "ds" %}
@@ -165,7 +166,11 @@ workshop is only open to people from a particular institution.
 {% if info.carpentry == "swc" %}
 {% include swc/who.html %}
 {% elsif info.carpentry == "dc" %}
-{% include dc/who.html %}
+<div style="display: flex"><div>
+     <strong>Who:&nbsp;</strong>
+     </div>
+     <div markdown=1>{% remote_include {{lesson_meta}}/who.md %}</div></div>
+<!-- {% include dc/who.html %} -->
 {% elsif info.carpentry == "lc" %}
 {% include lc/who.html %}
 {% elsif info.carpentry == "ds" %}
@@ -460,20 +465,6 @@ please preview your site before committing, and make sure to run
 </p>
 
 {% comment %}
-For online workshops, the section below provides:
-- installation instructions for the Zoom client
-- recommendations for setting up Learners' workspace so they can follow along
-  the instructions and the videoconferencing
-
-If you do not use Zoom for your online workshop, edit the file
-`_includes/install_instructions/videoconferencing.html`
-to include the relevant installation instrucctions.
-{% endcomment %}
-{% if online != "false" %}
-{% include install_instructions/videoconferencing.html %}
-{% endif %}
-
-{% comment %}
 These are the installation instructions for the tools used
 during the workshop.
 {% endcomment %}
@@ -491,3 +482,17 @@ Please check the "Setup" page of
 [the lesson site]({{ site.lesson_site }}) for instructions to follow
 to obtain the software and data you will need to follow the lesson.
 {% endif %}
+{% comment %}
+For online workshops, the section below provides:
+- installation instructions for the Zoom client
+- recommendations for setting up Learners' workspace so they can follow along
+  the instructions and the videoconferencing
+
+If you do not use Zoom for your online workshop, edit the file
+`_includes/install_instructions/videoconferencing.html`
+to include the relevant installation instrucctions.
+{% endcomment %}
+{% if online != "false" %}
+{% include install_instructions/videoconferencing.html %}
+{% endif %}
+

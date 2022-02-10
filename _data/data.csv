@@ -1,2 +1,2 @@
 venue,address,country,latitude,longitude,humandate,humantime,startdate,enddate,instructor,helper,carpentry,curriculum,title,slug,flavor,eventbrite
-Netherlands eScience Center,online,NA,NA,NA,"March 07 - 09, 2022",9:00 - 13:00 CET,2022-03-07T00:00:00Z,2022-03-09T00:00:00Z,"Leon Oostrum, Hanno Spreeuw, Johan Hidding",Dafne van Kuppevelt,dc,dc-astronomy,Astronomy,2022-03-07-dc-astronomy-nlesc,NA,NA
+Netherlands eScience Center,online,NA,NA,NA,"March 07 - 09, 2022",9:00 - 13:00 CET,2022-03-07T00:00:00Z,2022-03-09T00:00:00Z,"Leon Oostrum, Hanno Spreeuw, Johan Hidding",Dafne van Kuppevelt,dc,dc-astronomy,"Astronomical Data Science with Python",2022-03-07-dc-astronomy-nlesc,NA,NA
